@@ -122,29 +122,7 @@ body, html {
     font-size: 2rem;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .main-text{
-        font-size: 60px;
-    }
-    .navbar-menu {
-        display: none;
-        flex-direction: column;
-    }
 
-    .navbar-links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-links li {
-        margin: 10px 0;
-    }
-
-    .navbar-toggle {
-        display: block;
-    }
-}
 
 /* Services section */
 .services-section {
@@ -183,24 +161,6 @@ body, html {
     font-size: 1.2rem;
 }
 
-/* Responsive services grid */
-@media (max-width: 1200px) {
-    .service-box {
-        width: calc(33.33% - 20px); /* 3 columns on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .service-box {
-        width: calc(50% - 20px); /* 2 columns on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .service-box {
-        width: 100%; /* 1 column on extra small screens */
-    }
-}
 
 /* About section */
 .about-section {
@@ -272,24 +232,7 @@ body, html {
     flex-shrink: 0; /* Prevent shrinking on small screens */
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-    }
 
-    .about-overlay-text {
-        max-width: 100%; /* Full width on small screens */
-        margin-bottom: 20px; /* Add spacing below the text */
-    }
-
-    .circle {
-        align-self: center; /* Center the circle */
-        margin-left: 0; /* Remove left margin */
-        margin-top: 20px; /* Add top margin */
-    }
-}
 
 
 /* Contact section */
@@ -354,17 +297,6 @@ body, html {
 
 
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .contact-form {
-        padding: 10px;
-    }
-
-    .form-group input, .form-group textarea {
-        padding: 8px;
-        font-size: 0.9rem;
-    }
-}
 /* Footer */
 .footer {
     background-color: #333;
@@ -420,31 +352,7 @@ body, html {
     color: #ccc;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center; /* Center items on small screens */
-    }
 
-    .footer-content, .footer-social {
-        max-width: 100%;
-        text-align: center; /* Center text on small screens */
-    }
-
-    .footer-social {
-        text-align: center;
-    }
-
-    .social-icons {
-        justify-content: center; /* Center icons on small screens */
-    }
-
-    .social-icons a {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
 
 
 /*SPLASH*/
@@ -685,3 +593,239 @@ body, html {
       /*para que la | se ponga con color*/
     }
   }
+
+  /* Responsive styles */
+
+  
+
+@media (max-width: 768px) {
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+
+}
+
+/* Responsive services grid */
+@media (max-width: 1200px) {
+    .service-box {
+        width: calc(33.33% - 20px); /* 3 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        width: calc(50% - 20px); /* 2 columns on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-box {
+        width: 100%; /* 1 column on extra small screens */
+    }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .about-overlay-text {
+        max-width: 100%; /* Full width on small screens */
+        margin-bottom: 20px; /* Add spacing below the text */
+    }
+
+    .circle {
+        align-self: center; /* Center the circle */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 20px; /* Add top margin */
+    }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 10px;
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center; /* Center items on small screens */
+    }
+
+    .footer-content, .footer-social {
+        max-width: 100%;
+        text-align: center; /* Center text on small screens */
+    }
+
+    .footer-social {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center; /* Center icons on small screens */
+    }
+
+    .social-icons a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+               /*saber más -> botón -> estilos*/
+               .saber_mas_boton{
+    
+                font-size:20px;
+                /*tamaño de la fuente*/
+                overflow: hidden;
+                /*para que se haga bien el hover*/
+                border: 1px solid white;
+                /*borde de saber más*/
+                border-radius: 5px;
+                /*borde redondeado*/
+                transition: background 0.3s ease;
+                /*para que la transición sea suave*/
+              
+                padding: 10px 20px;
+                  color: white;
+                  background-color:transparent;
+                  cursor: pointer;
+              }
+              @media (max-width: 768px) {
+                  .saber_mas_boton{
+                      font-size: 15px;
+                      padding: 5px 10px;
+              
+                  }
+              }
+              
+              
+              
+              
+              
+              .saber_mas_boton:before {
+                content: "";
+                /*para que se aplique bien el efecto*/
+                position: absolute;
+                /*para que se aplique bien el efecto*/
+                background: #e8c404;
+                /*para que se aplique bien el color del efecto*/
+                border-radius: 50%;
+                /*para que esté redendodeado*/
+                height: 0;
+                /*para que se aplique bien el efecto*/
+                top: 100%;
+                /*para que se aplique bien el efecto*/
+                left: 50%;
+                /*para que se aplique bien el efecto*/
+                transform: translate(-50%, -50%);
+                /*para que se cargue bien el efecto*/
+                transition: width 0.3s ease, height 0.3s ease;
+                /*para que se cargue bien el efecto*/
+                z-index: -1;
+                /*para que se cargue bien el efecto*/
+              }
+              
+              
+              /*saber más al hacer hover*/
+              .saber_mas_boton:hover {
+                background: #e8c404;
+                /*fondo del color del saber más*/
+                border: 1px solid #e8c404;
+                /*borde de saber más*/
+              }
+              
+              .saber_mas_boton:hover:before{
+                width: 200%;
+                /*para que se cargue bien el efecto*/
+                height: 200%;
+                /*para que se cargue bien el efecto*/
+              }
+              
+              
+              
+              /*ANIMACIÓN DEL BOTÓN -> saber más*/
+              .boton-animado-inicio {
+                animation: shake;
+                /*animación de shake de saber más*/
+                animation-iteration-count: infinite;
+                /*para que se cargue el saber más*/
+                animation-duration: 6s;
+                /*animación y para que se cargue el botón*/
+              }
+              
+              @-webkit-keyframes shake {
+              
+                /*animación shake*/
+                4%,
+                16% {
+                  transform: translate3d(2px, 0, 0);
+                  /*animación del botón*/
+                }
+              
+                6%,
+                10%,
+                14% {
+                  transform: translate3d(-4px, 0, 0);
+                  /*animación del botón*/
+                }
+              
+                8%,
+                12% {
+                  transform: translate3d(4px, 0, 0);
+                  /*animación del borde*/
+                }
+              }
+              
+
+
+
+/*el del iphone*/
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .main-text{
+            font-size: 75px;
+        }   
+
+        .navbar-logo img {
+            width:480px; 
+            height:240px;
+        }
+        #texto{
+            font-size: 40px;
+
+        }
+        
+        #texto::after {
+            height: 25px;
+
+        }
+        .saber_mas_boton{
+            font-size: 35px;
+            padding: 20px 20px;
+        }
+
+
+     }
+    
