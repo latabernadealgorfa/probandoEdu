@@ -125,7 +125,7 @@ body, html {
 /* Responsive styles */
 @media (max-width: 768px) {
     .main-text{
-        font-size: 20px;
+        font-size: 60px;
     }
     .navbar-menu {
         display: none;
