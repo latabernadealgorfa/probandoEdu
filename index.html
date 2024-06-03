@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="img/favicon_gif.gif">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | EduDynamis</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap"
+		rel="stylesheet">
+    
+</head>
+
+<body>
+    <!--SPLASH-->
+    <div id="splashEduDynamis">
+        <img src="img/favicon.png" class="cargandoImagenEduDynamis">
+    </div>
+    <div class="video-container">
+        <video autoplay muted loop class="background-video">
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="img/logo_nav.png" alt="Logo">
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <ul class="navbar-links">
+                    <li>
+                        <div class="estilosNav borde_lista_nav">
+                            <a href="index.html">Inicio</a>
+                        </div>
+                    </li>
+
+
+
+
+
+                    <li>
+                        <div class="ServiciosBoton">
+                            <a onclick="irAServiciosPortafolio()">Servicios</a>
+                            <ul class="ServiciosBoton_Lista">
+                                <li class="" id="unoProbando">
+                                    <a href="" target="_blank">Educación para el
+                                        Trabajo y el Desarrollo Humano</a>
+                                </li>
+                                <li class="" id="dosProbando">
+                                    <a href="" target="_blank">Educación Formal</a>
+                                </li>
+                                <li class="" id="tresProbando">
+                                    <a href="" target="_blank">Escuelas Normales Superiores</a>
+                                </li>
+                                <li class="" id="cuatroProbando">
+                                    <a href="" target="_blank">Marketing
+                                        Digital Educativo</a>
+                                </li>
+                                <li class="" id="cincoProbando">
+                                    <a href="" target="_blank">Asesoría de Proyectos de Grado y Tesis</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+
+                    <li>
+                        <div class="estilosNav borde_lista_nav">
+                            <a onclick="irAQS()">¿Quiénes Somos?</a>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="estilosNav borde_lista_nav">
+                            <a onclick="irAContacto()">Contacto</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-toggle">
+                <span class="navbar-toggle-icon">&#9776;</span>
+            </div>
+        </div>
+    </nav>
+    <div class="overlay-text">
+        <p class="main-text">CREAMOS, MEJORAMOS Y POTENCIAMOS TU ESTABLECIMIENTO EDUCATIVO</p>
+        <p id="texto">Somos tus aliados expertos en Educación.</p>
+        <div class="button-container">
+            <button class="saber_mas_boton boton-animado-inicio" onclick="irAServiciosPortafolio()">Saber más</button>
+
+            <style>
+                /*saber más -> botón -> estilos*/
+.saber_mas_boton{
+    
+  font-size:20px;
+  /*tamaño de la fuente*/
+  overflow: hidden;
+  /*para que se haga bien el hover*/
+  border: 1px solid white;
+  /*borde de saber más*/
+  border-radius: 5px;
+  /*borde redondeado*/
+  transition: background 0.3s ease;
+  /*para que la transición sea suave*/
+
+  padding: 10px 20px;
+    color: white;
+    background-color:transparent;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .saber_mas_boton{
+        font-size: 15px;
+        padding: 5px 10px;
+
+    }
+}
+
+
+
+.saber_mas_boton:before {
+  content: "";
+  /*para que se aplique bien el efecto*/
+  position: absolute;
+  /*para que se aplique bien el efecto*/
+  background: #e8c404;
+  /*para que se aplique bien el color del efecto*/
+  border-radius: 50%;
+  /*para que esté redendodeado*/
+  height: 0;
+  /*para que se aplique bien el efecto*/
+  top: 100%;
+  /*para que se aplique bien el efecto*/
+  left: 50%;
+  /*para que se aplique bien el efecto*/
+  transform: translate(-50%, -50%);
+  /*para que se cargue bien el efecto*/
+  transition: width 0.3s ease, height 0.3s ease;
+  /*para que se cargue bien el efecto*/
+  z-index: -1;
+  /*para que se cargue bien el efecto*/
+}
+
+
+/*saber más al hacer hover*/
+.saber_mas_boton:hover {
+  background: #e8c404;
+  /*fondo del color del saber más*/
+  border: 1px solid #e8c404;
+  /*borde de saber más*/
+}
+
+.saber_mas_boton:hover:before{
+  width: 200%;
+  /*para que se cargue bien el efecto*/
+  height: 200%;
+  /*para que se cargue bien el efecto*/
+}
+
+
+
+/*ANIMACIÓN DEL BOTÓN -> saber más*/
+.boton-animado-inicio {
+  animation: shake;
+  /*animación de shake de saber más*/
+  animation-iteration-count: infinite;
+  /*para que se cargue el saber más*/
+  animation-duration: 6s;
+  /*animación y para que se cargue el botón*/
+}
+
+@-webkit-keyframes shake {
+
+  /*animación shake*/
+  4%,
+  16% {
+    transform: translate3d(2px, 0, 0);
+    /*animación del botón*/
+  }
+
+  6%,
+  10%,
+  14% {
+    transform: translate3d(-4px, 0, 0);
+    /*animación del botón*/
+  }
+
+  8%,
+  12% {
+    transform: translate3d(4px, 0, 0);
+    /*animación del borde*/
+  }
+}
+
+
+            </style>
+            <button class="circular"></button>
+
+
+            
+        </div>
+    </div>
+    <section class="services-section">
+        <h2 class="services-title">Nuestros Servicios</h2>
+        <p class="services-description">Te ayudamos a materializar tu sueño de crear o mejorar integralmente tu
+            Establecimiento Educativo.</p>
+        <div class="services-grid">
+            <div class="service-box">Servicio 1</div>
+            <div class="service-box">Servicio 2</div>
+            <div class="service-box">Servicio 3</div>
+            <div class="service-box">Servicio 4</div>
+            <div class="service-box">Servicio 5</div>
+        </div>
+    </section>
+    <section class="about-section">
+        <div class="about-video-container">
+            <video autoplay muted loop class="about-background-video">
+                <source src="quienesomos.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
+        <div class="about-overlay-text">
+            <h2 class="about-title">¿Quiénes Somos?</h2>
+            <p class="about-description">EduDynamis Asesores Educativos es una entidad conformada por un grupo de
+                profesionales con amplia experiencia en diversas áreas de la educación y de otras disciplinas. Ofrecemos
+                un amplio portfolio de Servicios y Asesorías educativas para el sector privado y oficial, con el fin de
+                responder a las necesidades que se generan en la prestación del servicio educativo o en el momento de
+                crear un Establecimiento Educativo para ofrecer Educación Formal Regular y/o Educación para el Trabajo y
+                el Desarrollo Humano.</p>
+            <button class="cta-button">Saber más</button>
+        </div>
+        <div class="circle"></div>
+    </section>
+
+    <section class="contact-section">
+        <h2 class="contact-title">Contáctenos</h2>
+        <p class="contact-description">Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de los
+            siguientes medios.</p>
+        <div class="contact-form-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>Teléfono:<br>+57 314-707-4324</p>
+                <p>Email:<br>edudynamis1@gmail.com</p>
+                <p>Ubicación:<br>Medellín - Colombia</p>
+                <p>Cámara de Comercio:<br>Nº 21-752473-01</p>
+            </div>
+            <div class="footer-social">
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
+                <p class="copyright">&copy; 2024 EduDynamis. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="probando.js"></script>
+    <script src="js/splash.js"></script>
+    <script src="js/scrollNav.js"></script>
+    <script src="js/irAServicios.js"></script>
+    <script src="js/textoEscribiendo.js"></script>
+
+
+</body>
+
+</html>

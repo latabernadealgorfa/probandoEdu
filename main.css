@@ -1,0 +1,687 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Video background container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make it full viewport height */
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%)
+
+}
+
+/* Overlay text */
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 35px;
+    color: white;
+    text-align: left;
+}
+
+.main-text {
+    font-size: 45px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px #000;
+}
+
+
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.circular {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+    transition: 0.2s ease; /*transición*/
+}
+
+
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.navbar-logo img {
+    width:240px; 
+    height:120px;
+    filter: brightness(0) invert(1) grayscale(100%) contrast(100%);
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+.navbar-toggle-icon {
+    font-size: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .main-text{
+        font-size: 20px;
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+/* Services section */
+.services-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-description {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 20px auto;
+    max-width: 600px; /* Adjust the max-width as needed */
+    padding: 0 20px; /* Ensure there's some padding on smaller screens */
+}
+
+/* Services grid */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.service-box {
+    background-color: #ccc;
+    padding: 40px;
+    width: calc(20% - 20px); /* 20% width minus the gap */
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Responsive services grid */
+@media (max-width: 1200px) {
+    .service-box {
+        width: calc(33.33% - 20px); /* 3 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        width: calc(50% - 20px); /* 2 columns on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-box {
+        width: 100%; /* 1 column on extra small screens */
+    }
+}
+
+/* About section */
+.about-section {
+    position: relative;
+    width: 100%;
+    height: auto; /* Change to auto for responsive height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #000;
+    padding: 40px 20px; /* Adjust padding for responsive design */
+    flex-wrap: wrap; /* Enable wrapping for small screens */
+}
+
+.about-video-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.about-background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%)
+
+}
+
+.about-overlay-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: left;
+    max-width: 600px; /* Optional: to limit the width of the text */
+    margin-right: auto; /* Add margin to push circle to the right */
+    flex: 1; /* Allow text to take available space */
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    color: white;
+    background-color:transparent;
+    cursor: pointer;
+}
+
+/* Circle */
+.circle {
+    position: relative;
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    background-color: #ffffff; /* Adjust color as needed */
+    border-radius: 50%;
+    z-index: 1; /* Ensure it appears above the video */
+    margin-left: auto; /* Add margin to push circle to the right */
+    flex-shrink: 0; /* Prevent shrinking on small screens */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .about-overlay-text {
+        max-width: 100%; /* Full width on small screens */
+        margin-bottom: 20px; /* Add spacing below the text */
+    }
+
+    .circle {
+        align-self: center; /* Center the circle */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 20px; /* Add top margin */
+    }
+}
+
+
+/* Contact section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 20px auto;
+    max-width: 600px; /* Adjust the max-width as needed */
+    padding: 0 20px; /* Ensure there's some padding on smaller screens */
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 10px;
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start */
+    padding: 0 20px;
+    flex-wrap: wrap; /* Enable wrapping for small screens */
+}
+
+.footer-content, .footer-social {
+    max-width: 300px; /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add spacing for responsiveness */
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer-content p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-social {
+    text-align: right;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px; /* Space between icons and copyright */
+}
+
+.social-icons a {
+    margin-left: 10px;
+}
+
+.social-icons img {
+    width: 24px; /* Adjust icon size as needed */
+    height: 24px;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center; /* Center items on small screens */
+    }
+
+    .footer-content, .footer-social {
+        max-width: 100%;
+        text-align: center; /* Center text on small screens */
+    }
+
+    .footer-social {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center; /* Center icons on small screens */
+    }
+
+    .social-icons a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+/*SPLASH*/
+#splashEduDynamis {
+    position: fixed;
+    /*para que aparezca bien el splash*/
+    top: 0;
+    /*para que aparezca bien el splash*/
+    left: 0;
+    /*para que esté bien colocado el splash*/
+    width: 100%;
+    /*para que ocupe toda la pantalla el splash*/
+    height: 100%;
+    /*para que ocupe toda la altura*/
+    background-color: white;
+    /*para que el fondo sea blanco*/
+    display: flex;
+    /*para que el splash esté bien centrado*/
+    justify-content: center;
+    /*para que el splash esté bien centrado*/
+    align-items: center;
+    /*para que la imagen ocupe el tamaño bien*/
+    z-index: 9999;
+    /*lo que ocupa el splash*/
+  }
+
+  .cargandoImagenEduDynamis {
+    width: 100px;
+    /*para que la imagen ocupe el tamaño correcto*/
+    animation: spin 1s linear infinite;
+    /*para que la imagen de vueltas de manera infinita*/
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+      /*el efecto para que dé vueltas la imagen*/
+    }
+  }
+
+
+  nav.active .navbar-logo img{
+    filter: none!important;
+    /*para que no se aplique filtro en el logo cuando se haga scroll*/
+  }
+
+  nav.active {
+    background-color: white; /*cuando se hace scroll el fondo blanco*/
+    box-shadow: 0px 0px 5px 0px rgba(11, 11, 11, 0.5);
+    /*la sombra del nav de color azul oscuro*/
+  }
+  
+
+  nav.active ul li a {
+    color: black;
+    /*cuando esté el nav moviéndose el color esté así*/
+  }
+
+  nav.active .navbar-toggle-icon{
+    color:black;
+  }
+
+  .estilosNav a {
+    padding: 5px 5px;
+    /*es necesario dejar ese relleno para que no se crucen con los textos los bordes*/
+    position: relative;
+    /*para que el borde solo se aplique en el controno no en todo el nav*/
+  }
+
+  /*el borde que se aplica a los elementos del nav al hacer :hover*/
+.borde_lista_nav a:before,
+.borde_lista_nav a:after {
+  position: absolute;
+  /*para que el borde al hacer hover esté bien colocado*/
+  width: 0%;
+  /*para que se aplique bien el borde al hacer hover*/
+  height: 1px;
+  /*altura del borde al hacer hover*/
+  content: '';
+  /*para que aparezca la línea*/
+  background: #e8c404;
+  /*para que los elementos al hacer hover el color sea amarillo*/
+  transition: all 0.3s ease;
+  /*para que la transición sea suave*/
+}
+
+.borde_lista_nav a:before {
+  left: 0px;
+  /*para que el borde se coloque bien*/
+  top: 0px;
+  /*para que el borde se coloque bien*/
+}
+
+.borde_lista_nav a:after {
+  right: 0px;
+  /*para que el borde se coloque bien*/
+  bottom: 0px;
+  /*para que el borde se coloque bien*/
+}
+
+.borde_lista_nav a:hover:before,
+.borde_lista_nav a:hover:after {
+  width: 100%;
+  /*para que el borde aparezca*/
+}
+
+
+/*EL BOTÓN DE SERVICIOS LOS ESTILOS*/
+.ServiciosBoton {
+    background-color: #e8c404;
+    /*fondo del botón de Servicios*/
+    cursor: pointer;
+    /*para que esté cursor encima cuando esté el botón de Servicios*/
+    position: relative;
+    /*para que el menu de la sublista estén los elementos bien colocados*/
+    padding: 7.5px 15px;
+    /*relleno del botón de capa de Servicios*/
+    border-radius: 10px;
+    /*redendodeado de la capa de Servicios*/
+    margin-top: -7.5px;
+  }
+  
+  .ServiciosBoton:hover {
+    border: 1px solid #e8c404;
+    /*para que al hacer hover el borde sea amarillo*/
+    background-color: transparent;
+    /*para que al hacer hover esté el background transparente*/
+    transition: all 0.2s ease;
+    /*transición suave*/
+  }
+  
+  .ServiciosBoton_Lista {
+    list-style: none;
+    /*para que los elementos de la lista no tengan viñetas*/
+    padding: 0;
+    /*para que la sublista esté bien colocada*/
+    margin: 10px -40px;
+    /*margen por la parte superior y que esté bien colocada la sublista*/
+    position: absolute;
+    /*para que esté bien colocada la sublista y la lista*/
+    opacity: 0;
+    /*para que inicialmente la sublista no aparezca*/
+    transition: opacity 0.3s ease;
+    /*transición para que aparezca suavemente*/
+  }
+  
+  .ServiciosBoton:hover .ServiciosBoton_Lista {
+    opacity: 1;
+    /*para que aparezca la lista*/
+  }
+  
+  .ServiciosBoton_Lista li {
+    padding: 5px 10px;
+    /*margen superior y en el lateral para que esté bien colocada la lista*/
+  }
+
+  nav.active ul li#unoProbando {
+    border-top-left-radius: 10px;
+    /*para que cuando baje tenga el borde así en la parte que pone*/
+    border-top-right-radius: 10px;
+    /*para que cuando baje tenga el borde así en la parte que pone*/
+  
+  }
+  
+  nav.active ul li#unoProbando a:hover,
+  nav.active ul li#dosProbando a:hover,
+  nav.active ul li#tresProbando a:hover,
+  nav.active ul li#cuatroProbando a:hover,
+  nav.active ul li#cincoProbando a:hover {
+    color: white !important;
+    /*para que cuando se haga scroll y se ponga la sublista amarilla al hacer hover el color se ponga blanco*/
+    transition: all 0.2s ease;
+    /*para que se haga una transición suave a los elementos de la sublista cuando haga scroll*/
+  }
+  
+  nav.active ul li#unoProbando,
+  nav.active ul li#dosProbando,
+  nav.active ul li#tresProbando,
+  nav.active ul li#cuatroProbando,
+  nav.active ul li#cincoProbando {
+    background-color:rgba(232, 196, 4, 0.75);
+    /*cuando esté el nav moviéndose el color esté así*/
+  }
+  
+  nav.active ul li#cincoProbando {
+    border-bottom-left-radius: 10px;
+    /*para que tenga esos bordes redondeados el último elemento de la sublista al hacer scroll*/
+    border-bottom-right-radius: 10px;
+    /*para que tenga esos bordes redondeados el último elemento de la sublista al hacer scroll*/
+  }
+
+ 
+.estilosNav a:hover{
+    color: #e8c404;
+  }
+
+  a{
+    cursor: pointer;
+  }
+
+
+
+
+/*estilos -> TEXTO -> QUE SE VA ESCRIBIENDO*/
+#texto {
+    /*para que la letra este de ese color blanco*/
+    font-size: 1.1rem;
+    /*tamaño de la fuente*/
+    text-shadow: 0.5px 0.5px 1px black;
+    /*sombra de los textos de somos tus aliados expertos en educación*/
+
+  }
+  
+  /*| de somos tus aliados expertos en educación*/
+  #texto::after {
+    content: '';
+    /*para que aparezaca el somos tus aliados |*/
+    display: inline-block;
+    /*para que aparezca |*/
+    background-color: #e8c404;
+    /*color de la |*/
+    width: 3px;
+    /*anchura de |*/
+    height: 18.5px;
+    /*altura de |*/
+    opacity: 0;
+    /*para que parpadea*/
+    margin-bottom: -1px;
+    /*para esté bien ajustado con el texto |*/
+    animation: blink 500ms infinite;
+    /*animación*/
+  }
+  
+  /*animación para que se ponga con color*/
+  @keyframes blink {
+    to {
+      opacity: 1;
+      /*para que la | se ponga con color*/
+    }
+  }
