@@ -852,6 +852,8 @@ body, html {
         }     
         .service-box5{
                     width: 100%; /* 1 column on extra small screens */
+                        height: 500px;
+
      }
 
 
