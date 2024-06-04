@@ -7,7 +7,189 @@
 
 }
 
+.carta_servicios {
+    position: relative;
+    /*para que el efecto solo se ocupe en las cartas*/
+    display: flex;
+    /*para que estén bien organizadas las cajas*/
+    overflow: hidden;
+    /*para que se aplique bien el efecto*/
+    color: white;
+    /*para que el texto esté de color blanco*/
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+    /*sombreado de las cajas*/
+    cursor: pointer;
+    /*para que al pasar por encima de las cajas se active el cursor*/
+    height: 500px;
+    /*altura de cada una de las cajas*/
+  }
+  
+  /*efectos de las imágenes de las cartas de Nuestros Servicios*/
+  .carta_servicios:before {
+    content: '';
+    /*para que aparezcan las imágenes*/
+    position: absolute;
+    /*para que las imágenes estén bien colocadas*/
+    top: 0;
+    /*para que las imágenes no se muevan cuando se haga el efecto*/
+    width: 100%;
+    /*para que se muestre bien las imágenes*/
+    height: 110%;
+    /*para que se muestren bien las imágenes*/
+    background-size: cover;
+    /*para que la imagen esté bien colocada*/
+  }
+  
+  .carta_servicios:after {
+    content: '';
+    /*para que se aplique bien el efecto*/
+    position: absolute;
+    /*para que se aplique bien el efecto*/
+    top: 0;
+    /*para que se aplique bien el efecto*/
+    width: 100%;
+    /*para que se aplique bien el efecto*/
+    height: 200%;
+    /*para que se aplique bien el efecto*/
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.320) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.540) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.790) 100%);
+    /*el color del efecto que se le aplica*/
+  }
+  
+  
+  .carta_servicios:nth-child(2):before {
+    background-image: url(img/escuelasnormalesuperiores.jpeg);
+    /*imagen 3 de la carta 3*/
+  }
+  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  .contenido_carta_servicios {
+    transition: all 0.5s ease;
+    /**transición suave en la que se suben los textos*/
+    z-index: 1;
+    /*para que los textos ocupen las posición de por delante en las cartas*/
+  }
+  
+  .contenido_carta_servicios {
+    transform: translateY(82.5%);
+    /*desde donde parten los textos para llegar hasta la mitad*/
+  }
+  
+  .carta_servicios:hover .contenido_carta_servicios {
+    transform: translateY(0%);
+    /*hasta donde suban los textos de la caja de los servicios*/
+  }
+  
+  .carta_servicios:hover {
+    align-items: center;
+    /*para que al hacer hover encima de las cartas estén los elementos centrados*/
+  }
+  
+  .carta_servicios:hover:after {
+    transform: translateY(-50%);
+    /*para que se carge bien el efecto de darle encima de las cartas cajas*/
+  }
+  
+  .textos_especiales_cajas {
+  margin-top: -20px;
+  /*para que el texto de Educación para el Trabajo -> esté bien puesto -> posicionado*/
+}
+
+.textos_especiales_cajas2 {
+  margin-top: -5px;
+  /*para que el texto de Educación para el Trabajo -> esté bien puesto -> posicionado*/
+}
+
+/*DESCRIPCIÓN  DE LAS CARTAS */
+.descripcionCartas {
+  cursor: text;
+  /*para que cuando el cursor esté encima esté |*/
+  padding: 0px 10px 0px 10px;
+}
+/*botón de la flecha de -> de la segunda sección de Nuestros Servicios*/
+.saber_mas_boton3 {
+  display: inline-block;
+  /*para que se ocupe bien el div al hacer :hover*/
+  padding: 0.5em 1em;
+  /*relleno del botón*/
+  border: 1px solid #fff;
+  /*para que el borde sea con ese pixel*/
+  border-radius: 5px;
+  /*borde redondeado*/
+  transition: background 0.3s ease;
+  /*transición suave*/
+}
+
+/*el botón de las flechas al hacer hover*/
+.saber_mas_boton3:hover {
+  background: #e8c404;
+  /*el botón de amarillo al hacer hover*/
+  border: 1px solid #e8c404;
+  /*el borde del botón para que sea amarillo*/
+}
+
+/*BOTÓN -> FLECHA*/
+.flecha_1 {
+  position: relative;
+  /*para que la flecha de los botones esté bien colocado*/
+  animation: moverFlechaHaciaDerecha 0.5s infinite alternate;
+  /*animación para que se mueva la flecha*/
+  padding: 10px;
+  /*relleno del botón*/
+}
+
+/*efectos para la línea de la flecha*/
+.linea_1 {
+  width: 20px;
+  /*para que la línea ocupe esa línea*/
+  height: 1px;
+  /*para que la línea esté así*/
+  background-color: white;
+  /*el color de la línea*/
+}
+/*PUNTAS DE LA FLECHA*/
+.punta_1 {
+  border-top: 7.5px solid transparent;
+  /*FLECHA PARTE DE ARRIBA*/
+  border-bottom: 7.5px solid transparent;
+  /*FLECHA PARTE DE ABAJO*/
+  border-left: 7.5px solid white;
+  /*tamaño de la punta de la flecha*/
+  position: absolute;
+  /*para que esté bien colocada la punta de la flecha*/
+  left: 25px;
+  /*para que esté la línea bien pegada con la punta*/
+  transform: translateY(-50%);
+  /*para que la punta esté centrada con la flecha*/
+}
+
+/*ANIMACIÓN DE LA FLECHA*/
+@keyframes moverFlechaHaciaDerecha {
+  0% {
+    left: -15px;
+    /*empieza desde -15px*/
+  }
+
+  100% {
+    left: 15px;
+    /*donde termina el efecto*/
+  }
+}
 body, html {
     width: 100%;
     height: 100%;
@@ -860,11 +1042,24 @@ body, html {
      }
      .navbar-toggle{
         display: block;
-
+        
      }
      .navbar-toggle-icon {
         font-size: 5rem;
     }
+    .carta_servicios{
+        width: calc(50% - 20px); /* 2 columns on small screens */
+
+    }
+    .contenido_carta_servicios {
+        transform: translateY(90%);
+        /*desde donde parten los textos para llegar hasta la mitad*/
+      }
+
+      .carta_servicios:hover .contenido_carta_servicios {
+        transform: translateY(10%);
+        /*hasta donde suban los textos de la caja de los servicios*/
+      }
     }
 
 
