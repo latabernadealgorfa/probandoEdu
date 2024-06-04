@@ -1074,6 +1074,24 @@ body, html {
 .flecha_1 {
     padding: 15px;
   }
+
+
+  /*efectos para la línea de la flecha*/
+.linea_1 {
+    width: 30px;
+    /*para que la línea ocupe esa línea*/
+  }
+  /*PUNTAS DE LA FLECHA*/
+  .punta_1 {
+    border-top: 10px solid transparent;
+    /*FLECHA PARTE DE ARRIBA*/
+    border-bottom: 10px solid transparent;
+    /*FLECHA PARTE DE ABAJO*/
+    border-left: 10px solid white;
+    /*tamaño de la punta de la flecha*/
+    left: 40px;
+    /*para que esté la línea bien pegada con la punta*/
+  }
     }
 
 
