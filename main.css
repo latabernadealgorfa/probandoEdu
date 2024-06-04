@@ -855,6 +855,18 @@ body, html {
                         height: 500px;
 
      }
+     .navbar-links{
+        display: none;
+     }
+     .navbar-toggle{
+        display: block;
+        margin-top: -25px;
+
+     }
+     .navbar-toggle-icon {
+        font-size: 5rem;
+    }
+    }
 
 
 
@@ -864,4 +876,3 @@ body, html {
     src: url("GentySans-Regular/GentySans-Regular.woff2") format("woff2"),
       url("GentySans-Regular/GentySans-Regular.woff") format("woff");
   }
-  
