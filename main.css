@@ -158,7 +158,7 @@ body, html {
     margin-top: 40px;
 }
 
-.service-box {
+.service-box, service-box5 {
     background-color: #ccc;
     padding: 40px;
     width: calc(20% - 20px); /* 20% width minus the gap */
@@ -849,7 +849,9 @@ body, html {
         .service-box {
             width: calc(50% - 20px); /* 2 columns on small screens */
             height: 500px;
-        }          
+        }     
+        .service-box5{
+                    width: 100%; /* 1 column on extra small screens */
      }
 
 
