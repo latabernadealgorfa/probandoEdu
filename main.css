@@ -1052,7 +1052,7 @@ body, html {
 
     }
     .contenido_carta_servicios {
-        transform: translateY(90%);
+        transform: translateY(75%);
         /*desde donde parten los textos para llegar hasta la mitad*/
       }
 
@@ -1060,6 +1060,20 @@ body, html {
         transform: translateY(10%);
         /*hasta donde suban los textos de la caja de los servicios*/
       }
+      .textos_especiales_cajas{
+        font-size: 35px;
+        padding: 0px 10px 5px 10px;
+
+      }
+      .descripcionCartas {
+        padding: 10px 20px 20px 20px;
+        font-size: 25px;
+      }
+
+      /*BOTÓN -> FLECHA*/
+.flecha_1 {
+    padding: 15px;
+  }
     }
 
 
