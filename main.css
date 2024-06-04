@@ -134,7 +134,11 @@ body, html {
 .services-title {
     font-size: 40px;
     color: #08345c;
+}
+
+.textoGenty{
     font-family: 'GentySansRegular', sans-serif
+
 }
 
 .services-description {
