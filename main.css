@@ -846,7 +846,10 @@ body, html {
         font-size:15px;
         }
 
-
+        .service-box {
+            width: calc(50% - 20px); /* 2 columns on small screens */
+            height: 500px;
+        }          
      }
 
 
