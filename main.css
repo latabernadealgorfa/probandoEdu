@@ -825,6 +825,11 @@ body, html {
             font-size: 40px;
             padding: 30px 40px;
         }
+        
+        .cargandoImagenEduDynamis{
+            width: 250px;
+            height: 250px;
+        }
 
 
      }
