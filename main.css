@@ -1,312 +1,1164 @@
-<!DOCTYPE html>
-<html lang="es">
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 
-<head>
-    <link rel="icon" type="image/x-icon" href="img/favicon_gif.gif">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | EduDynamis</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap"
-		rel="stylesheet">
+}
+
+.carta_servicios{
+    position: relative;
+    /*para que el efecto solo se ocupe en las cartas*/
+    display: flex;
+    /*para que estén bien organizadas las cajas*/
+    overflow: hidden;
+    /*para que se aplique bien el efecto*/
+    color: white;
+    /*para que el texto esté de color blanco*/
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+    /*sombreado de las cajas*/
+    cursor: pointer;
+    /*para que al pasar por encima de las cajas se active el cursor*/
+    height: 450px;
+    /*altura de cada una de las cajas*/
+    width:20%; /* 2 columns on small screens */
+
+  }
+  
+  /*efectos de las imágenes de las cartas de Nuestros Servicios*/
+  .carta_servicios:before{
+    content: '';
+    /*para que aparezcan las imágenes*/
+    position: absolute;
+    /*para que las imágenes estén bien colocadas*/
+    top: 0;
+    /*para que las imágenes no se muevan cuando se haga el efecto*/
+    width: 100%;
+    /*para que se muestre bien las imágenes*/
+    height: 110%;
+    /*para que se muestren bien las imágenes*/
+    background-size: cover;
+    /*para que la imagen esté bien colocada*/
+  }
+  
+  .carta_servicios:after {
+    content: '';
+    /*para que se aplique bien el efecto*/
+    position: absolute;
+    /*para que se aplique bien el efecto*/
+    top: 0;
+    /*para que se aplique bien el efecto*/
+    width: 100%;
+    /*para que se aplique bien el efecto*/
+    height: 200%;
+    /*para que se aplique bien el efecto*/
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.320) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.540) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.790) 100%);
+    /*el color del efecto que se le aplica*/
+  }
+  
+  
+  .carta_servicios:nth-child(1):before {
+    background-image: url(img/educacionparaeldesarrolloyeltrabajo.jpeg);
+    /*imagen 3 de la carta 3*/
+  }
+  
+  .carta_servicios:nth-child(2):before {
+    background-image: url(img/educacionformal.jpeg);
+    /*imagen 3 de la carta 3*/
+  }
+
+  .carta_servicios:nth-child(3):before {
+    background-image: url(img/escuelasnormalesuperiores.jpeg);
+    /*imagen 3 de la carta 3*/
+  }
+
+  .carta_servicios:nth-child(4):before {
+    background-image: url(img/marketingdigital.jpeg);
+    /*imagen 3 de la carta 3*/
+  }
+
+
+  .carta_servicios:nth-child(5):before {
+    background-image: url(img/asesorías.jpeg);
+    /*imagen 3 de la carta 3*/
+  }
+
+
+
+
+
+
+
+
+
+  
+  
+  .contenido_carta_servicios, .contenido_carta_servicios2, .contenido_carta_servicios3, .contenido_carta_servicios4, .contenido_carta_servicios5{
+    transition: all 0.5s ease;
+    /**transición suave en la que se suben los textos*/
+    z-index: 1;
+    /*para que los textos ocupen las posición de por delante en las cartas*/
+  }
+  
+  .contenido_carta_servicios {
+    transform: translateY(82.5%);
+    /*desde donde parten los textos para llegar hasta la mitad*/
+  }
+  .contenido_carta_servicios2 {
+    transform: translateY(97.5%);
+    /*desde donde parten los textos para llegar hasta la mitad*/
+  }
+  .contenido_carta_servicios3 {
+    transform: translateY(90%);
+    /*desde donde parten los textos para llegar hasta la mitad*/
+  }
+  
+  .carta_servicios:hover .contenido_carta_servicios, .carta_servicios:hover .contenido_carta_servicios2, .carta_servicios:hover .contenido_carta_servicios3, .carta_servicios:hover .contenido_carta_servicios5{
+    transform: translateY(0%);
+    /*hasta donde suban los textos de la caja de los servicios*/
+  }
+  
+  .carta_servicios:hover{
+    align-items: center;
+    /*para que al hacer hover encima de las cartas estén los elementos centrados*/
+  }
+  
+  .carta_servicios:hover:after {
     
-</head>
+    transform: translateY(-50%);
+    /*para que se carge bien el efecto de darle encima de las cartas cajas*/
+  }
+  
+  .textos_especiales_cajas {
+  margin-top: -20px;
+  /*para que el texto de Educación para el Trabajo -> esté bien puesto -> posicionado*/
+}
 
-<body>
-    <!--SPLASH-->
-    <div id="splashEduDynamis">
-        <img src="img/favicon.png" class="cargandoImagenEduDynamis">
-    </div>
-    <div class="video-container">
-        <video autoplay muted loop class="background-video">
-            <source src="video.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
-    </div>
-    <nav class="navbar" id="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <a href="index.html">
-                    <img src="img/logo_nav.png" alt="Logo">
-                </a>
-            </div>
-            <div class="navbar-menu">
-                <ul class="navbar-links">
-                    <li>
-                        <div class="estilosNav borde_lista_nav">
-                            <a href="index.html">Inicio</a>
-                        </div>
-                    </li>
+.textos_especiales_cajas2 {
+  margin-top: -5px;
+  /*para que el texto de Educación para el Trabajo -> esté bien puesto -> posicionado*/
+}
 
+/*DESCRIPCIÓN  DE LAS CARTAS */
+.descripcionCartas {
+  cursor: text;
+  /*para que cuando el cursor esté encima esté |*/
+  padding: 0px 10px 0px 10px;
+}
+/*botón de la flecha de -> de la segunda sección de Nuestros Servicios*/
+.saber_mas_boton3 {
+  display: inline-block;
+  /*para que se ocupe bien el div al hacer :hover*/
+  padding: 0.5em 1em;
+  /*relleno del botón*/
+  border: 1px solid #fff;
+  /*para que el borde sea con ese pixel*/
+  border-radius: 5px;
+  /*borde redondeado*/
+  transition: background 0.3s ease;
+  /*transición suave*/
+}
 
+/*el botón de las flechas al hacer hover*/
+.saber_mas_boton3:hover {
+  background: #e8c404;
+  /*el botón de amarillo al hacer hover*/
+  border: 1px solid #e8c404;
+  /*el borde del botón para que sea amarillo*/
+}
 
+/*BOTÓN -> FLECHA*/
+.flecha_1 {
+  position: relative;
+  /*para que la flecha de los botones esté bien colocado*/
+  animation: moverFlechaHaciaDerecha 0.5s infinite alternate;
+  /*animación para que se mueva la flecha*/
+  padding: 10px;
+  /*relleno del botón*/
+}
 
+/*efectos para la línea de la flecha*/
+.linea_1 {
+  width: 20px;
+  /*para que la línea ocupe esa línea*/
+  height: 1px;
+  /*para que la línea esté así*/
+  background-color: white;
+  /*el color de la línea*/
+}
+/*PUNTAS DE LA FLECHA*/
+.punta_1 {
+  border-top: 7.5px solid transparent;
+  /*FLECHA PARTE DE ARRIBA*/
+  border-bottom: 7.5px solid transparent;
+  /*FLECHA PARTE DE ABAJO*/
+  border-left: 7.5px solid white;
+  /*tamaño de la punta de la flecha*/
+  position: absolute;
+  /*para que esté bien colocada la punta de la flecha*/
+  left: 25px;
+  /*para que esté la línea bien pegada con la punta*/
+  transform: translateY(-50%);
+  /*para que la punta esté centrada con la flecha*/
+}
 
-                    <li>
-                        <div class="ServiciosBoton">
-                            <a onclick="irAServiciosPortafolio()">Servicios</a>
-                            <ul class="ServiciosBoton_Lista">
-                                <li class="" id="unoProbando">
-                                    <a href="" target="_blank">Educación para el
-                                        Trabajo y el Desarrollo Humano</a>
-                                </li>
-                                <li class="" id="dosProbando">
-                                    <a href="" target="_blank">Educación Formal</a>
-                                </li>
-                                <li class="" id="tresProbando">
-                                    <a href="" target="_blank">Escuelas Normales Superiores</a>
-                                </li>
-                                <li class="" id="cuatroProbando">
-                                    <a href="" target="_blank">Marketing
-                                        Digital Educativo</a>
-                                </li>
-                                <li class="" id="cincoProbando">
-                                    <a href="" target="_blank">Asesoría de Proyectos de Grado y Tesis</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+/*ANIMACIÓN DE LA FLECHA*/
+@keyframes moverFlechaHaciaDerecha {
+  0% {
+    left: -15px;
+    /*empieza desde -15px*/
+  }
 
+  100% {
+    left: 15px;
+    /*donde termina el efecto*/
+  }
+}
+body, html {
+    width: 100%;
+    height: 100%;
+}
 
+/* Video background container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make it full viewport height */
+    overflow: hidden;
+}
 
-                    <li>
-                        <div class="estilosNav borde_lista_nav">
-                            <a onclick="irAQS()">¿Quiénes Somos?</a>
-                        </div>
-                    </li>
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%)
 
+}
 
-                    <li>
-                        <div class="estilosNav borde_lista_nav">
-                            <a onclick="irAContacto()">Contacto</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar-toggle">
-                <span class="navbar-toggle-icon">&#9776;</span>
-            </div>
-        </div>
-    </nav>
-    <div class="overlay-text">
-        <p class="main-text">CREAMOS, MEJORAMOS Y POTENCIAMOS TU ESTABLECIMIENTO EDUCATIVO</p>
-        <p id="texto">Somos tus aliados expertos en Educación.</p>
-        <div class="button-container">
-            <button class="saber_mas_boton boton-animado-inicio" onclick="irAServiciosPortafolio()">Saber más</button>
+/* Overlay text */
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 35px;
+    color: white;
+    text-align: left;
+}
 
-
-
-            <button class="circular"></button>
-
-
-            
-        </div>
-    </div>
-    <section class="services-section">
-        <h2 class="services-title textoGenty">Nuestros Servicios</h2>
-        <p class="services-description">Te ayudamos a materializar tu <b class="textoGenty">sueño</b> de crear o mejorar integralmente tu
-            Establecimiento Educativo.</p>
-        <div class="services-grid">
-
-
-
-			<!--CARTA - 1-->
-			<div class="carta_servicios">
-				<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas-->
-				<div class="contenido_carta_servicios">
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano-->
-					<h2 class="textos_especiales_cajas">Educación para el Trabajo y el Desarrollo Humano</h2>
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> DESCRIPCIÓN DE LA CARTA 1 -->
-					<p class="descripcionCartas">Obtención de licencia de funcionamiento, registro o renovación de
-						programas, implementación de educación virtual, entre otros servicios.</p>
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> EL BOTÓN  DE LAS FLECHAS -->
-					<a class="saber_mas_boton3 boton-animado-inicio" href=""
-						target="_blank">
-						<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> EL BOTÓN  DE LAS FLECHAS -->
-						<div class="flecha_1">
-							<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> LA LÍNEA DE LA FLECHA -->
-							<div class="linea_1"></div>
-							<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> LA PUNTA DE LA FLECHA -->
-							<div class="punta_1"></div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-
-            			<!--CARTA - 2-->
-			<div class="carta_servicios ">
-				<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas-->
-				<div class="contenido_carta_servicios2">
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano-->
-					<h2 class="textos_especiales_cajas">Educación Formal</h2>
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> DESCRIPCIÓN DE LA CARTA 1 -->
-					<p class="descripcionCartas">Obtención de licencia de funcionamiento para Preescolares, Colegios, Educación de Adultos, Asesorías para el mejoramiento continuo, cualificación de maestros y directivos, costos educativos, entre otros servicios.
-                    </p>
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> EL BOTÓN  DE LAS FLECHAS -->
-					<a class="saber_mas_boton3 boton-animado-inicio" href=""
-						target="_blank">
-						<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> EL BOTÓN  DE LAS FLECHAS -->
-						<div class="flecha_1">
-							<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> LA LÍNEA DE LA FLECHA -->
-							<div class="linea_1"></div>
-							<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> LA PUNTA DE LA FLECHA -->
-							<div class="punta_1"></div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-
-            			<!--CARTA - 3-->
-			<div class="carta_servicios ">
-				<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas-->
-				<div class="contenido_carta_servicios3">
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano-->
-					<h2 class="textos_especiales_cajas">Escuelas Normales Superiores</h2>
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> DESCRIPCIÓN DE LA CARTA 1 -->
-					<p class="descripcionCartas">Obtención de Autorización para la oferta del Programa de Formación Complementaria ante el MEN, acompañamiento para alistamiento de condiciones básicas de calidad, cursos a medida para maestros en formación, entre otros servicios.</p>
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> EL BOTÓN  DE LAS FLECHAS -->
-					<a class="saber_mas_boton3 boton-animado-inicio" href=""
-						target="_blank">
-						<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> EL BOTÓN  DE LAS FLECHAS -->
-						<div class="flecha_1">
-							<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> LA LÍNEA DE LA FLECHA -->
-							<div class="linea_1"></div>
-							<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> LA PUNTA DE LA FLECHA -->
-							<div class="punta_1"></div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-            			<!--CARTA - 4-->
-			<div class="carta_servicios ">
-				<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas-->
-				<div class="contenido_carta_servicios4">
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano-->
-					<h2 class="textos_especiales_cajas">Marketing Digital Educativo</h2>
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> DESCRIPCIÓN DE LA CARTA 1 -->
-					<p class="descripcionCartas">Obtención de Autorización para la oferta del Programa de Formación Complementaria ante el MEN, acompañamiento para alistamiento de condiciones básicas de calidad, cursos a medida para maestros en formación, entre otros servicios.
-
-                    </p>
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> EL BOTÓN  DE LAS FLECHAS -->
-					<a class="saber_mas_boton3 boton-animado-inicio" href=""
-						target="_blank">
-						<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> EL BOTÓN  DE LAS FLECHAS -->
-						<div class="flecha_1">
-							<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> LA LÍNEA DE LA FLECHA -->
-							<div class="linea_1"></div>
-							<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> LA PUNTA DE LA FLECHA -->
-							<div class="punta_1"></div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<!--CARTA - 1-->
-			<div class="carta_servicios diferente">
-				<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas-->
-				<div class="contenido_carta_servicios5">
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano-->
-					<h2 class="textos_especiales_cajas">Asesoría Proyectos de Grado y Tesis</h2>
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> DESCRIPCIÓN DE LA CARTA 1 -->
-					<p class="descripcionCartas">Te acompañamos en la elaboración de tus trabajos de grados o tesis de pregrado, maestría o doctorado. Cumple el sueño de graduarte pronto y sin angustias.</p>
-					<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> EL BOTÓN  DE LAS FLECHAS -->
-					<a class="saber_mas_boton3 boton-animado-inicio" href=""
-						target="_blank">
-						<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> EL BOTÓN  DE LAS FLECHAS -->
-						<div class="flecha_1">
-							<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> LA LÍNEA DE LA FLECHA -->
-							<div class="linea_1"></div>
-							<!--sección 2 web -> estilos de las cartas -> cajas -> efecto de las cajas -> Caja 1 -> Educación para el Trabajo y el Desarrollo Humano -> LA PUNTA DE LA FLECHA -->
-							<div class="punta_1"></div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-
-            	
-        </div>
-    </section>
-    <section class="about-section">
-        <div class="about-video-container">
-            <video autoplay muted loop class="about-background-video">
-                <source src="quienesomos.mp4" type="video/mp4">
-                Tu navegador no soporta la etiqueta de video.
-            </video>
-        </div>
-        <div class="about-overlay-text">
-            <h2 class="about-title">¿Quiénes Somos?</h2>
-            <p class="about-description">EduDynamis Asesores Educativos es una entidad conformada por un grupo de
-                profesionales con amplia experiencia en diversas áreas de la educación y de otras disciplinas. Ofrecemos
-                un amplio portfolio de Servicios y Asesorías educativas para el sector privado y oficial, con el fin de
-                responder a las necesidades que se generan en la prestación del servicio educativo o en el momento de
-                crear un Establecimiento Educativo para ofrecer Educación Formal Regular y/o Educación para el Trabajo y
-                el Desarrollo Humano.</p>
-            <button class="cta-button">Saber más</button>
-        </div>
-        <div class="circle"></div>
-    </section>
-
-    <section class="contact-section">
-        <h2 class="contact-title">Contáctenos</h2>
-        <p class="contact-description">Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de los
-            siguientes medios.</p>
-        <div class="contact-form-container">
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="cta-button">Enviar</button>
-            </form>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <p>Teléfono:<br>+57 314-707-4324</p>
-                <p>Email:<br>edudynamis1@gmail.com</p>
-                <p>Ubicación:<br>Medellín - Colombia</p>
-                <p>Cámara de Comercio:<br>Nº 21-752473-01</p>
-            </div>
-            <div class="footer-social">
-                <div class="social-icons">
-                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                </div>
-                <p class="copyright">&copy; 2024 EduDynamis. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
+.main-text {
+    font-size: 45px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px #000;
+}
 
 
 
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
 
 
 
-    <script src="probando.js"></script>
-    <script src="js/splash.js"></script>
-    <script src="js/scrollNav.js"></script>
-    <script src="js/irAServicios.js"></script>
-    <script src="js/textoEscribiendo.js"></script>
+.circular {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+    transition: 0.2s ease; /*transición*/
+}
 
 
-</body>
 
-</html>
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.navbar-logo img {
+    width:240px; 
+    height:120px;
+    filter: brightness(0) invert(1) grayscale(100%) contrast(100%);
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+.navbar-toggle-icon {
+    font-size: 2rem;
+}
+
+
+
+/* Services section */
+.services-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 40px;
+    color: #08345c;
+}
+
+.textoGenty{
+    font-family: 'GentySansRegular', sans-serif
+
+}
+
+.services-description {
+    font-size: 1.2rem;
+    margin: 20px auto;
+    max-width: 600px; /* Adjust the max-width as needed */
+    padding: 0 20px; /* Ensure there's some padding on smaller screens */
+    
+}
+
+/* Services grid */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.service-box, .service-box5 {
+    background-color: #ccc;
+    padding: 40px;
+    width: calc(20% - 20px); /* 20% width minus the gap */
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+/* About section */
+.about-section {
+    position: relative;
+    width: 100%;
+    height: auto; /* Change to auto for responsive height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #000;
+    padding: 40px 20px; /* Adjust padding for responsive design */
+    flex-wrap: wrap; /* Enable wrapping for small screens */
+}
+
+.about-video-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.about-background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%)
+
+}
+
+.about-overlay-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: left;
+    max-width: 600px; /* Optional: to limit the width of the text */
+    margin-right: auto; /* Add margin to push circle to the right */
+    flex: 1; /* Allow text to take available space */
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    color: white;
+    background-color:transparent;
+    cursor: pointer;
+}
+
+/* Circle */
+.circle {
+    position: relative;
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    background-color: #ffffff; /* Adjust color as needed */
+    border-radius: 50%;
+    z-index: 1; /* Ensure it appears above the video */
+    margin-left: auto; /* Add margin to push circle to the right */
+    flex-shrink: 0; /* Prevent shrinking on small screens */
+}
+
+
+
+
+/* Contact section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 20px auto;
+    max-width: 600px; /* Adjust the max-width as needed */
+    padding: 0 20px; /* Ensure there's some padding on smaller screens */
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start */
+    padding: 0 20px;
+    flex-wrap: wrap; /* Enable wrapping for small screens */
+}
+
+.footer-content, .footer-social {
+    max-width: 300px; /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add spacing for responsiveness */
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer-content p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-social {
+    text-align: right;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px; /* Space between icons and copyright */
+}
+
+.social-icons a {
+    margin-left: 10px;
+}
+
+.social-icons img {
+    width: 24px; /* Adjust icon size as needed */
+    height: 24px;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+
+
+
+/*SPLASH*/
+#splashEduDynamis {
+    position: fixed;
+    /*para que aparezca bien el splash*/
+    top: 0;
+    /*para que aparezca bien el splash*/
+    left: 0;
+    /*para que esté bien colocado el splash*/
+    width: 100%;
+    /*para que ocupe toda la pantalla el splash*/
+    height: 100%;
+    /*para que ocupe toda la altura*/
+    background-color: white;
+    /*para que el fondo sea blanco*/
+    display: flex;
+    /*para que el splash esté bien centrado*/
+    justify-content: center;
+    /*para que el splash esté bien centrado*/
+    align-items: center;
+    /*para que la imagen ocupe el tamaño bien*/
+    z-index: 9999;
+    /*lo que ocupa el splash*/
+  }
+
+  .cargandoImagenEduDynamis {
+    width: 100px;
+    /*para que la imagen ocupe el tamaño correcto*/
+    animation: spin 1s linear infinite;
+    /*para que la imagen de vueltas de manera infinita*/
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+      /*el efecto para que dé vueltas la imagen*/
+    }
+  }
+
+
+  nav.active .navbar-logo img{
+    filter: none!important;
+    /*para que no se aplique filtro en el logo cuando se haga scroll*/
+  }
+
+  nav.active {
+    background-color: white; /*cuando se hace scroll el fondo blanco*/
+    box-shadow: 0px 0px 5px 0px rgba(11, 11, 11, 0.5);
+    /*la sombra del nav de color azul oscuro*/
+  }
+  
+
+  nav.active ul li a {
+    color: black;
+    /*cuando esté el nav moviéndose el color esté así*/
+  }
+
+  nav.active .navbar-toggle-icon{
+    color:black;
+  }
+
+  .estilosNav a {
+    padding: 5px 5px;
+    /*es necesario dejar ese relleno para que no se crucen con los textos los bordes*/
+    position: relative;
+    /*para que el borde solo se aplique en el controno no en todo el nav*/
+  }
+
+  /*el borde que se aplica a los elementos del nav al hacer :hover*/
+.borde_lista_nav a:before,
+.borde_lista_nav a:after {
+  position: absolute;
+  /*para que el borde al hacer hover esté bien colocado*/
+  width: 0%;
+  /*para que se aplique bien el borde al hacer hover*/
+  height: 1px;
+  /*altura del borde al hacer hover*/
+  content: '';
+  /*para que aparezca la línea*/
+  background: #e8c404;
+  /*para que los elementos al hacer hover el color sea amarillo*/
+  transition: all 0.3s ease;
+  /*para que la transición sea suave*/
+}
+
+.borde_lista_nav a:before {
+  left: 0px;
+  /*para que el borde se coloque bien*/
+  top: 0px;
+  /*para que el borde se coloque bien*/
+}
+
+.borde_lista_nav a:after {
+  right: 0px;
+  /*para que el borde se coloque bien*/
+  bottom: 0px;
+  /*para que el borde se coloque bien*/
+}
+
+.borde_lista_nav a:hover:before,
+.borde_lista_nav a:hover:after {
+  width: 100%;
+  /*para que el borde aparezca*/
+}
+
+
+/*EL BOTÓN DE SERVICIOS LOS ESTILOS*/
+.ServiciosBoton {
+    background-color: #e8c404;
+    /*fondo del botón de Servicios*/
+    cursor: pointer;
+    /*para que esté cursor encima cuando esté el botón de Servicios*/
+    position: relative;
+    /*para que el menu de la sublista estén los elementos bien colocados*/
+    padding: 7.5px 15px;
+    /*relleno del botón de capa de Servicios*/
+    border-radius: 10px;
+    /*redendodeado de la capa de Servicios*/
+    margin-top: -7.5px;
+  }
+  
+  .ServiciosBoton:hover {
+    border: 1px solid #e8c404;
+    /*para que al hacer hover el borde sea amarillo*/
+    background-color: transparent;
+    /*para que al hacer hover esté el background transparente*/
+    transition: all 0.2s ease;
+    /*transición suave*/
+  }
+  
+  .ServiciosBoton_Lista {
+    list-style: none;
+    /*para que los elementos de la lista no tengan viñetas*/
+    padding: 0;
+    /*para que la sublista esté bien colocada*/
+    margin: 10px -40px;
+    /*margen por la parte superior y que esté bien colocada la sublista*/
+    position: absolute;
+    /*para que esté bien colocada la sublista y la lista*/
+    opacity: 0;
+    /*para que inicialmente la sublista no aparezca*/
+    transition: opacity 0.3s ease;
+    /*transición para que aparezca suavemente*/
+  }
+  
+  .ServiciosBoton:hover .ServiciosBoton_Lista {
+    opacity: 1;
+    /*para que aparezca la lista*/
+  }
+  
+  .ServiciosBoton_Lista li {
+    padding: 5px 10px;
+    /*margen superior y en el lateral para que esté bien colocada la lista*/
+  }
+
+  nav.active ul li#unoProbando {
+    border-top-left-radius: 10px;
+    /*para que cuando baje tenga el borde así en la parte que pone*/
+    border-top-right-radius: 10px;
+    /*para que cuando baje tenga el borde así en la parte que pone*/
+  
+  }
+  
+  nav.active ul li#unoProbando a:hover,
+  nav.active ul li#dosProbando a:hover,
+  nav.active ul li#tresProbando a:hover,
+  nav.active ul li#cuatroProbando a:hover,
+  nav.active ul li#cincoProbando a:hover {
+    color: white !important;
+    /*para que cuando se haga scroll y se ponga la sublista amarilla al hacer hover el color se ponga blanco*/
+    transition: all 0.2s ease;
+    /*para que se haga una transición suave a los elementos de la sublista cuando haga scroll*/
+  }
+  
+  nav.active ul li#unoProbando,
+  nav.active ul li#dosProbando,
+  nav.active ul li#tresProbando,
+  nav.active ul li#cuatroProbando,
+  nav.active ul li#cincoProbando {
+    background-color:rgba(232, 196, 4, 0.75);
+    /*cuando esté el nav moviéndose el color esté así*/
+  }
+  
+  nav.active ul li#cincoProbando {
+    border-bottom-left-radius: 10px;
+    /*para que tenga esos bordes redondeados el último elemento de la sublista al hacer scroll*/
+    border-bottom-right-radius: 10px;
+    /*para que tenga esos bordes redondeados el último elemento de la sublista al hacer scroll*/
+  }
+
+ 
+.estilosNav a:hover{
+    color: #e8c404;
+  }
+
+  a{
+    cursor: pointer;
+  }
+
+
+
+
+/*estilos -> TEXTO -> QUE SE VA ESCRIBIENDO*/
+#texto {
+    /*para que la letra este de ese color blanco*/
+    font-size: 1.1rem;
+    /*tamaño de la fuente*/
+    text-shadow: 0.5px 0.5px 1px black;
+    /*sombra de los textos de somos tus aliados expertos en educación*/
+
+  }
+  
+  /*| de somos tus aliados expertos en educación*/
+  #texto::after {
+    content: '';
+    /*para que aparezaca el somos tus aliados |*/
+    display: inline-block;
+    /*para que aparezca |*/
+    background-color: #e8c404;
+    /*color de la |*/
+    width: 3px;
+    /*anchura de |*/
+    height: 18.5px;
+    /*altura de |*/
+    opacity: 0;
+    /*para que parpadea*/
+    margin-bottom: -1px;
+    /*para esté bien ajustado con el texto |*/
+    animation: blink 500ms infinite;
+    /*animación*/
+  }
+  
+  /*animación para que se ponga con color*/
+  @keyframes blink {
+    to {
+      opacity: 1;
+      /*para que la | se ponga con color*/
+    }
+  }
+
+  /* Responsive styles */
+
+  
+
+@media (max-width: 768px) {
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+
+}
+
+/* Responsive services grid */
+@media (max-width: 1200px) {
+    .service-box {
+        width: calc(33.33% - 20px); /* 3 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        width: calc(50% - 20px); /* 2 columns on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-box {
+        width: 100%; /* 1 column on extra small screens */
+    }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .about-overlay-text {
+        max-width: 100%; /* Full width on small screens */
+        margin-bottom: 20px; /* Add spacing below the text */
+    }
+
+    .circle {
+        align-self: center; /* Center the circle */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 20px; /* Add top margin */
+    }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 10px;
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center; /* Center items on small screens */
+    }
+
+    .footer-content, .footer-social {
+        max-width: 100%;
+        text-align: center; /* Center text on small screens */
+    }
+
+    .footer-social {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center; /* Center icons on small screens */
+    }
+
+    .social-icons a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+               /*saber más -> botón -> estilos*/
+               .saber_mas_boton{
+    
+                font-size:20px;
+                /*tamaño de la fuente*/
+                overflow: hidden;
+                /*para que se haga bien el hover*/
+                border: 1px solid white;
+                /*borde de saber más*/
+                border-radius: 5px;
+                /*borde redondeado*/
+                transition: background 0.3s ease;
+                /*para que la transición sea suave*/
+              
+                padding: 10px 20px;
+                  color: white;
+                  background-color:transparent;
+                  cursor: pointer;
+              }
+              @media (max-width: 768px) {
+                  .saber_mas_boton{
+                      font-size: 15px;
+                      padding: 5px 10px;
+              
+                  }
+              }
+              
+              
+              
+              
+              
+              .saber_mas_boton:before {
+                content: "";
+                /*para que se aplique bien el efecto*/
+                position: absolute;
+                /*para que se aplique bien el efecto*/
+                background: #e8c404;
+                /*para que se aplique bien el color del efecto*/
+                border-radius: 50%;
+                /*para que esté redendodeado*/
+                height: 0;
+                /*para que se aplique bien el efecto*/
+                top: 100%;
+                /*para que se aplique bien el efecto*/
+                left: 50%;
+                /*para que se aplique bien el efecto*/
+                transform: translate(-50%, -50%);
+                /*para que se cargue bien el efecto*/
+                transition: width 0.3s ease, height 0.3s ease;
+                /*para que se cargue bien el efecto*/
+                z-index: -1;
+                /*para que se cargue bien el efecto*/
+              }
+              
+              
+              /*saber más al hacer hover*/
+              .saber_mas_boton:hover {
+                background: #e8c404;
+                /*fondo del color del saber más*/
+                border: 1px solid #e8c404;
+                /*borde de saber más*/
+              }
+              
+              .saber_mas_boton:hover:before{
+                width: 200%;
+                /*para que se cargue bien el efecto*/
+                height: 200%;
+                /*para que se cargue bien el efecto*/
+              }
+              
+              
+              
+              /*ANIMACIÓN DEL BOTÓN -> saber más*/
+              .boton-animado-inicio {
+                animation: shake;
+                /*animación de shake de saber más*/
+                animation-iteration-count: infinite;
+                /*para que se cargue el saber más*/
+                animation-duration: 6s;
+                /*animación y para que se cargue el botón*/
+              }
+              
+              @-webkit-keyframes shake {
+              
+                /*animación shake*/
+                4%,
+                16% {
+                  transform: translate3d(2px, 0, 0);
+                  /*animación del botón*/
+                }
+              
+                6%,
+                10%,
+                14% {
+                  transform: translate3d(-4px, 0, 0);
+                  /*animación del botón*/
+                }
+              
+                8%,
+                12% {
+                  transform: translate3d(4px, 0, 0);
+                  /*animación del borde*/
+                }
+              }
+              
+
+
+
+/*el del iphone*/
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .main-text{
+            font-size: 75px;
+        }   
+
+        .navbar-logo img {
+            width:480px; 
+            height:240px;
+        }
+        #texto{
+            font-size: 40px;
+
+        }
+        
+        #texto::after {
+            height: 25px;
+
+        }
+        .saber_mas_boton{
+            font-size: 40px;
+            padding: 30px 40px;
+        }
+        
+        .cargandoImagenEduDynamis{
+            width: 250px;
+            height: 250px;
+        }
+
+                .services-title{
+            font-size: 75px;
+            margin-top: 100px;
+                    
+
+        }
+        .services-description {
+        font-size:15px;
+        }
+
+        .service-box {
+            width: calc(50% - 20px); /* 2 columns on small screens */
+            height: 500px;
+        }     
+        .service-box5{
+                    width: 100%; /* 1 column on extra small screens */
+                        height: 500px;
+
+     }
+     .navbar-links{
+        display: none;
+     }
+     .navbar-toggle{
+        display: block;
+        
+     }
+     .navbar-toggle-icon {
+        font-size: 5rem;
+    }
+    .carta_servicios{
+        width: calc(50% - 20px); /* 2 columns on small screens */
+        height: 500px;
+
+
+    }
+ 
+    .contenido_carta_servicios {
+        transform: translateY(75%);
+        /*desde donde parten los textos para llegar hasta la mitad*/
+      }
+      .contenido_carta_servicios2 {
+        transform: translateY(90%);
+        /*desde donde parten los textos para llegar hasta la mitad*/
+      }
+      .contenido_carta_servicios3 {
+        transform: translateY(82.5%);
+        /*desde donde parten los textos para llegar hasta la mitad*/
+      }
+      .contenido_carta_servicios4 {
+        transform: translateY(85%);
+        /*desde donde parten los textos para llegar hasta la mitad*/
+      }
+      .contenido_carta_servicios5 {
+        transform: translateY(90%);
+        /*desde donde parten los textos para llegar hasta la mitad*/
+      }
+
+      .carta_servicios:hover .contenido_carta_servicios, .carta_servicios:hover .contenido_carta_servicios2{
+        transform: translateY(10%);
+        /*hasta donde suban los textos de la caja de los servicios*/
+      }
+      .carta_servicios:hover .contenido_carta_servicios3,   .carta_servicios:hover .contenido_carta_servicios4{
+        transform: translateY(5%);
+        /*hasta donde suban los textos de la caja de los servicios*/
+      }
+
+.carta_servicios:hover .contenido_carta_servicios5{
+        transform: translateY(10%);
+        /*hasta donde suban los textos de la caja de los servicios*/
+      }
+   
+      .textos_especiales_cajas{
+        font-size: 35px;
+        padding: 0px 10px 5px 10px;
+
+      }
+      .descripcionCartas {
+        padding: 10px 20px 20px 20px;
+        font-size: 25px;
+      }
+
+      .diferente 
+      {
+        width: 97.5%; /* 1 column on extra small screens */
+
+      }
+
+      /*BOTÓN -> FLECHA*/
+.flecha_1 {
+    padding: 15px;
+  }
+
+
+  /*efectos para la línea de la flecha*/
+.linea_1 {
+    width: 30px;
+    /*para que la línea ocupe esa línea*/
+  }
+  /*PUNTAS DE LA FLECHA*/
+  .punta_1 {
+    border-top: 10px solid transparent;
+    /*FLECHA PARTE DE ARRIBA*/
+    border-bottom: 10px solid transparent;
+    /*FLECHA PARTE DE ABAJO*/
+    border-left: 10px solid white;
+    /*tamaño de la punta de la flecha*/
+    left: 40px;
+    /*para que esté la línea bien pegada con la punta*/
+  }
+    }
+
+
+
+/*FUENTE DE LA WEB*/
+@font-face {
+    font-family: "GentySansRegular";
+    src: url("GentySans-Regular/GentySans-Regular.woff2") format("woff2"),
+      url("GentySans-Regular/GentySans-Regular.woff") format("woff");
+  }
