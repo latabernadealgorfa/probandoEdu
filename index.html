@@ -267,14 +267,158 @@
         <div class="circle"></div>
     </section>
 
+
+
+		<!--SECCIÓN 4-> CONTACTO-->
+		<!--estilo general del id y para que se vaya directamente hacie él-->
+		<div class="formularioContacto1" id="contacto_portafolio">
+			<!--tamaño del formulario-->
+			<div class="tamañoFormularioContacto">
+				<div class="wow fadeInUp" data-wow-delay="0.2">
+					<!--FUENTE -> Contáctenos-->
+					<h2 class="pordebajo SomosTusAliados2">Contáctenos</h2>
+				</div>
+				<form>
+					<div class="formularioEduDynamis">
+						<!--Nombre-->
+						<div class='porlaizquierda  wow fadeInUp' data-wow-delay="0.4">
+							<!--estilo caja de los input-->
+							<input class='efectosDivsContacto' placeholder='' required="" type='text'>
+							<!--estilo letras de la caja de los input-->
+							<label class="titularesContacto letrasContacto">Nombre</label>
+						</div>
+
+                        
+						<!--Correo electrónico-->
+						<div class='porladerecha  wow fadeInUp' data-wow-delay="0.6">
+							<!--estilo caja de los input-->
+							<input class='efectosDivsContacto' placeholder='' required="" type='email'>
+							<!--estilo letras de la caja de los input-->
+							<label class="titularesContacto letrasContacto">Correo electrónico</label>
+						</div>
+						<!--Número de teléfono-->
+						<div class='porladerecha  wow fadeInUp' data-wow-delay="0.8">
+							<!--estilo caja de los input-->
+							<input class='efectosDivsContacto' placeholder='' required="" type='tel'>
+							<!--estilo letras de la caja de los input-->
+							<label class="titularesContacto letrasContacto">Teléfono</label>
+						</div>
+						<!--Mensaje-->
+						<div class='titularMensajeContacto  pordebajo  wow fadeInUp' data-wow-delay="1.0">
+							<!--estilo caja de los input-->
+							<textarea class='efectosDivsContacto efectosDivsContacto_Mensaje' placeholder=''></textarea>
+							<!--estilo letras de la caja de los input-->
+							<label class="titularesContacto letrasContacto">Mensaje</label>
+						</div>
+						<!--Enviar-->
+						<button id="enviar" type="submit" class="pordebajo wow fadeInUp" data-wow-delay="1.2">
+							<img src="img/enviar_1.png" width="20px" id="imagen_prueba" />
+							<label id="imagen_prueba2" class="letrasContacto">Enviar</label>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+        <section class="contact-section">
+            <h2 class="contact-title textoGenty">Contáctenos</h2>
+            <p class="contact-description">Estamos acá para ayudarte. No dude en ponerse en contacto con nosotros.</p>
+            <div class="contact-form-container">
+                <form>
+                    <div class="form-group">
+                        <input type="text" id="nombre" class="form-input efectosDivsContacto" placeholder=" " required style="font-size: 25px; padding-left:15px; padding-top: 20px;">
+                        <label for="nombre" class="form-label" style="  color: gray;   left: 15px; 
+
+">Nombre</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="nombre" class="form-input efectosDivsContacto" placeholder=" " required style="font-size: 25px; padding-left:15px; padding-top: 20px;">
+                        <label for="nombre" class="form-label" style="  color: gray;   left: 15px; 
+
+">Correo electrónico</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="nombre" class="form-input efectosDivsContacto" placeholder=" " required style="font-size: 25px; padding-left:15px; padding-top: 20px;">
+                        <label for="nombre" class="form-label" style="  color: gray;   left: 15px; 
+
+">Teléfono</label>
+                    </div>
+
+
+                        <div class="form-group2">
+                            <input type="text" id="nombre" class="form-input2 efectosDivsContacto" placeholder=" " required>
+                            <label for="nombre" class="form-label2" style="color: gray;">Mensaje</label>
+                        </div>
+
+
+
+            
+                </form>
+            </div>
+        </section>
+
+
+        <style>
+
+    
+            .form-group2 {
+                position: relative;
+                margin-bottom: 1.5rem;
+            }
+    
+            .form-input2 {
+                width: 100%;
+                height: 250px; /* Increased height for input */
+                padding: 0.5rem 0.75rem 1rem 0.75rem; /* Adjusted padding to bring text closer to the top */
+                font-size: 1rem;
+                padding-bottom:150px;
+                border-radius: 4px;
+                box-sizing: border-box; /* Ensures padding is included in the total width */
+            }
+    
+            .form-label2 {
+                position: absolute;
+                top: 1rem; /* Adjust the initial position of the label */
+                left: 0.75rem;
+                font-size: 1rem;
+                color: #aaa;
+                transition: all 0.2s ease-in-out;
+                pointer-events: none;
+            }
+
+
+    
+            .form-input2:focus + .form-label2,
+            .form-input2:not(:placeholder-shown) + .form-label2 {
+                top: 0.25rem; /* Move the label upwards */
+                font-size: 0.75rem;
+                color: #333;
+            }
+    
+            .form-input2:focus::placeholder {
+                color: transparent; /* Hide the placeholder when the input is focused */
+            }
+        </style>
+
+
+
     <section class="contact-section">
-        <h2 class="contact-title">Contáctenos</h2>
-        <p class="contact-description">Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de los
-            siguientes medios.</p>
+        <h2 class="contact-title textoGenty">Contáctenos</h2>
+        <p class="contact-description">Estamos acá para ayudarte. No dude en ponerse en contacto con nosotros.</p>
         <div class="contact-form-container">
             <form class="contact-form">
                 <div class="form-group">
-                    <label for="name">Nombre:</label>
+                    <label for="name">Nombre</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
@@ -289,6 +433,9 @@
             </form>
         </div>
     </section>
+
+
+    
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-content">
