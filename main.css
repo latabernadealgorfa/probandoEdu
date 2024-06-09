@@ -1047,14 +1047,10 @@ body, html {
     /*para que el formulario esté centrado*/
     display: flex;
     /*para que las cajas solo ocupen la mitad*/
-    padding-top: 100px;
-    /*para que tenga un ancho por la parte superior */
-    padding-bottom: 150px;
-    /*para que tenga un margen por debajo*/
   }
 
   .tamañoFormularioContacto {
-    flex-basis: 50%;
+    flex-basis: 48.5%;
     /*para que el formulario ocupe la mitad*/
   }
   
@@ -1073,10 +1069,6 @@ body, html {
 .formularioEduDynamis {
   display: flex;
   /*para que esté bien organizada*/
-  flex-wrap: wrap;
-  /*para que esté bien organizado*/
-  gap: 15px;
-  /*separación entre los elementos del contacto*/
 }
 
 .formularioEduDynamis>* {
@@ -1202,7 +1194,7 @@ body, html {
   /*para la imagen se mueva hasta ahí*/
   transition: all 200ms;
   /*transición*/
-  color: white;
+  color: #f4f4f4;
   /*color del texto "enviar"*/
   font-weight: 50;
   /*para que la letra esté fina*/
@@ -1465,8 +1457,36 @@ font-size: 30px!important;
 }
 
 
+.tamañoFormularioContacto {
+  flex-basis: 64%;
+  /*para que el formulario ocupe la mitad*/
+}
+
+
+.formularioEduDynamis{
+  height: 100px;
+}
 
 
 
 
+
+#enviar>#imagen_prueba2 {
+  transform: translateY(100px);
+}
+
+ #imagen_prueba{
+  width: 35px;
+  height: 35px;
+  margin-top: 15px;
+  margin-left: 30px!important;
+}
+
+.letrasContacto{
+  font-size: 30px;
+  margin-top: 15px;
+  margin-left: -55px!important;
+
+}
+  
 }
